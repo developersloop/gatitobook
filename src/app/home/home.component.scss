@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &.--full-height {
+    min-height: 100vh;
+  }
+}

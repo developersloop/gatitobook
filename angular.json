@@ -20,6 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "showCircularDependencies": false,
             "outputPath": "dist/gatitobook",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -31,7 +32,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css"
             ],
             "scripts": []
           },
@@ -126,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "gatitobook"
+    }
+  },
+  "defaultProject": "gatitobook",
+  "cli": {
+    "analytics": "6fc19c4f-7d66-4890-8333-0db9adeb9145"
+  }
 }

@@ -1,0 +1,32 @@
+<h4 class="text-center">Login</h4>
+<form class="form mt-4" (ngSubmit)="login()" #loginForm="ngForm">
+  <div class="form-group mt-4">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Nome do usuario"
+      [(ngModel)]="username"
+      name="username"
+      #fieldUser="ngModel"
+      required
+    >
+    <app-message *ngIf="fieldUser.invalid && fieldUser.touched" message="Input e-mail obrigatorio"></app-message>
+  </div>
+  <div class="form-group mt-4">
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Senha"
+      [(ngModel)]="password"
+      name="password"
+      #fieldPassword="ngModel"
+      required
+    >
+    <app-message *ngIf="fieldPassword.invalid && fieldPassword.touched" message="Input senha obrigatorio"></app-message>
+  </div>
+  <button type="submit" class="btn btn-primary btn-block mt-4 w-100" [disabled]="loginForm.invalid">Login</button>
+</form>
+<p class="mt-4">
+  Not this is user?
+  <a [routerLink]="['novo-usuario']">Click-me</a>
+</p>
